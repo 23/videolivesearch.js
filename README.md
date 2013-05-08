@@ -1,10 +1,14 @@
-# 23 Video Live Search
+## 23 Video Live Search
 
 23 Video Live Search is a jQuery plugin that enables showing of live search results from a 23 Video website as the user is typing in a search field. It supports searching for videos, channels and tags, and it provides a quick and smooth experience for browsing and navigating your video content. The plugin can be used both directly on a 23 Video website and on any other website where you wish to allow searching for video.
 
 23 Video Live Search relies on <a href="http://jquery.com/">jQuery</a> for DOM manipulation and <a href="https://github.com/23/visualplatform.js">visualplatform.js</a> for talking to 23 Video's API.
 
-# Usage
+## Demo
+
+See an implentation of this plugin on <a href="http://video.kglteater.dk">http://video.kglteater.dk</a>
+
+## Usage
 
 ### Activating live search
 
@@ -69,7 +73,7 @@ This plugin inserts unstyled content (apart from positioning and z-index of the 
 		</div>
 	</div>
 
-# Settings
+## Settings
 
 You can manipulate the following settings - *name* (Type) default:
 
@@ -86,4 +90,4 @@ You can manipulate the following settings - *name* (Type) default:
 - *showThumbnails* (Boolean) true // Show a thumbnail for each video result
 - *thumbnailWidth* (Number) 50  // Width of thumbnails
 - *thumbnailHeight* (Number) 28  // Height of thumbnails
-- *searchTimeout* (Number) 500  // Time in milliseconds between user input and search request
+- *searchDelay* (Number) 500  // Time in milliseconds between user input and search request

@@ -17,7 +17,7 @@
       showThumbnails: true,
       thumbnailWidth: 50,
       thumbnailHeight: 28,
-      searchTimeout: 500
+      searchDelay: 500
     }, options);
 
     // Fail if no domain is specified
@@ -156,7 +156,7 @@
     var keyupHandler = function() {
       $.each(timeouts, function(){window.clearTimeout(this);});
       timeouts = [];
-      timeouts.push(window.setTimeout(function(){inputHandler();}, settings.searchTimeout));
+      timeouts.push(window.setTimeout(function(){inputHandler();}, settings.searchDelay));
     };
 
     // Enable navigation by up/down and enter keys
