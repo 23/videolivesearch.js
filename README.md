@@ -25,7 +25,7 @@ Secondly, activate videoLiveSearch on a search field and pass in an object with 
 			$("#searchField").videoLiveSearch({
 				domain: "video.domain.com",
 				maxResults: 10,
-				searchTimeOut: 300
+				searchDelay: 300
 			});
 		});
 	</script>
@@ -83,7 +83,7 @@ You can manipulate the following settings - *name* (Type) default:
 - *searchVideos* (Boolean) true // Search for videos
 - *searchChannels* (Boolean) false // Search for channels
 - *searchTags* (Boolean) false  // Search for tags
-- *showHeadlines* (Boolean) true  // Show ha headline for each section
+- *showHeadlines* (Boolean) true  // Show a headline for each section
 - *videoHeadline* (String) "Videos" // Headline for the video section
 - *channelHeadline* (String) "Channels" // Headline for the channel section
 - *tagHeadline* (String) "Tags" // Headline for the tag section
