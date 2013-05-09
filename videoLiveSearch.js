@@ -1,6 +1,6 @@
 (function($) {
 
-  $.fn.videoLiveSearch = function(options) {
+  $.fn.videolivesearch = function(options) {
 
     var timeouts = [];
     var settings = $.extend({
@@ -22,7 +22,7 @@
 
     // Fail if no domain is specified
     if ( !settings.domain ) {
-      throw "videoLiveSearch.js: No domain specified."
+      throw "videolivesearch.js: No domain specified."
     }
 
     var searchField = this;

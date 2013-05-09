@@ -12,17 +12,17 @@ See an implentation of this plugin on <a href="http://video.kglteater.dk">http:/
 
 ### Activating live search
 
-To begin with, import jQuery, visualplatform.js and videoLiveSearch.js on the page:
+To begin with, import jQuery, visualplatform.js and videolivesearch.js on the page:
 
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="/path/to/visualplatform.js"></script>
-	<script src="/path/to/videoLiveSearch.js"></script>
+	<script src="/path/to/videolivesearch.js"></script>
 
-Secondly, activate videoLiveSearch on a search field and pass in an object with your settings:
+Secondly, activate videolivesearch.js on a search field and pass in an object with your settings:
 
 	<script>
 		$(document).ready(function(){
-			$("#searchField").videoLiveSearch({
+			$("#searchField").videolivesearch({
 				domain: "video.domain.com",
 				maxResults: 10,
 				searchDelay: 300
