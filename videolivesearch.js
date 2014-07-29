@@ -196,7 +196,7 @@
     });
 
     var blurHandler = function() {
-      window.setTimeout(function(){resultContainer.hide();},50);
+      window.setTimeout(function(){resultContainer.hide();},200);
     };
 
     var focusHandler = function() {
