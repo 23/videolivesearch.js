@@ -183,6 +183,8 @@
       } else if ( e.keyCode === 13 && $(".ls-selected").size() > 0 ) {
         $(".ls-selected").click();
         e.preventDefault();
+      } else if ( e.keyCode === 27 ) {
+        searchField.blur();
       }
     };
 
