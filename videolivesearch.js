@@ -4,7 +4,8 @@
 
     var timeouts = [];
     var settings = $.extend({
-      domain: undefined,
+      domain: document.domain,
+      protocol: (/https/.test(document.location.protocol)?"https":"http"),
       maxResults: 5,
       truncateTitles: 30,
       searchVideos: true,
@@ -28,6 +29,7 @@
     var searchField = this;
     var lastSearch = searchField.val();
     var api = Visualplatform(settings.domain);
+    api.protocol = settings.protocol;
 
     var photoEndpoint = "/api/photo/list";
     var albumEndpoint = "/api/album/list";
@@ -65,7 +67,7 @@
     var insertResult = function(title, url, srcArr, section) {
       var result = $("<div></div>").addClass("ls-result").attr("data-url", url);
       if (settings.showThumbnails && srcArr) {
-        var src = srcArr.join("/");
+        var src = settings.protocol+"://"+settings.domain+srcArr.join("/");
         var thumbContainer = $("<div></div>").addClass("ls-thumb-container");
         var thumb = $("<img />");
         thumb.addClass("ls-thumb").attr({
@@ -187,7 +189,7 @@
     $(resultContainer).on("click", ".ls-result", function(e) {
       $(".ls-selected").removeClass("ls-selected");
       $(this).addClass("ls-selected");
-      window.location = $(this).attr("data-url");
+      window.location = settings.protocol+"://"+settings.domain+$(this).attr("data-url");
     });
 
     $(resultContainer).on("mouseenter", ".ls-result", function() {

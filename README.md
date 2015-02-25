@@ -77,7 +77,8 @@ This plugin inserts unstyled content (apart from positioning and z-index of the 
 
 You can manipulate the following settings - *name* (Type) default:
 
-- *domain* (String) undefined // Domain of your video website
+- *domain* (String) document.domain // Domain of your video website
+- *protocol* (String) document.location.protocol // Protocol of video website
 - *maxResults* (Number) 5 // Maximum number search results in each section
 - *truncateTitles* (Number) 30 // Maximum characters in search result titles
 - *searchVideos* (Boolean) true // Search for videos
