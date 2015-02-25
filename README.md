@@ -51,7 +51,7 @@ This plugin inserts unstyled content (apart from positioning and z-index of the 
 			</div>
 			(...)
 		</div>
-                <div class="ls-section-events">
+		<div class="ls-section-events">
 			<div class="ls-headline">Videos</div>
 			<div class="ls-result">
 				<div class="ls-thumb-container">
@@ -100,13 +100,13 @@ You can manipulate the following settings - *name* (Type) default:
 - *searchVideos* (Boolean) true // Search for videos
 - *searchEvents* (Boolean) true // Search for live events
 - *searchChannels* (Boolean) false // Search for channels
-- *searchTags* (Boolean) false  // Search for tags
-- *showHeadlines* (Boolean) true  // Show a headline for each section
+- *searchTags* (Boolean) false // Search for tags
+- *showHeadlines* (Boolean) true // Show a headline for each section
 - *videoHeadline* (String) "Videos" // Headline for the video section
-- *eventHeadline* (String) "Videos" // Headline for the live event section
+- *eventHeadline* (String) "Events" // Headline for the live event section
 - *channelHeadline* (String) "Channels" // Headline for the channel section
 - *tagHeadline* (String) "Tags" // Headline for the tag section
-- *showThumbnails* (Boolean) true // Show a thumbnail for each video result
-- *thumbnailWidth* (Number) 50  // Width of thumbnails
-- *thumbnailHeight* (Number) 28  // Height of thumbnails
+- *showThumbnails* (Boolean) true // Show a thumbnail for each video and live event result
+- *thumbnailWidth* (Number) 50 // Width of thumbnails
+- *thumbnailHeight* (Number) 28 // Height of thumbnails
 - *searchDelay* (Number) 500  // Time in milliseconds between user input and search request
