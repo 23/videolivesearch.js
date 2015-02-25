@@ -9,10 +9,12 @@
       maxResults: 5,
       truncateTitles: 30,
       searchVideos: true,
+      searchEvents: true,
       searchChannels: false,
       searchTags: false,
       showHeadlines: true,
       videoHeadline: "Videos",
+      eventHeadline: "Events",
       channelHeadline: "Channels",
       tagHeadline: "Tags",
       showThumbnails: true,
@@ -32,6 +34,7 @@
     api.protocol = settings.protocol;
 
     var photoEndpoint = "/api/photo/list";
+    var liveEndpoint = "/api/live/list";
     var albumEndpoint = "/api/album/list";
     var tagEndpoint = "/api/tag/list";
 
@@ -97,6 +100,14 @@
           insertResult(this.title, this.one, srcArr, section);
         });
       }
+      if ( data.events && data.events.live.length > 0 ) {
+        var section = insertSection("events");
+        insertHeadline(settings.eventHeadline, section);
+        $(data.events.live).each(function() {
+          var srcArr = ["", this.thumbnail_tree_id, this.thumbnail_photo_id, this.thumbnail_token, retinaWidth + "x" + retinaHeight + "cr", "thumbnail.jpg"];
+          insertResult(this.name, this.link, srcArr, section);
+        });
+      }
       if ( data.albums && data.albums.albums.length > 0 ) {
         var section = insertSection("channels");
         insertHeadline(settings.channelHeadline, section);
@@ -130,6 +141,13 @@
           requests.push({
             "method": photoEndpoint,
             "name": "photos",
+            "data": data
+          });
+        }
+        if ( settings.searchEvents ) {
+          requests.push({
+            "method": liveEndpoint,
+            "name": "events",
             "data": data
           });
         }

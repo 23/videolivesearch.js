@@ -51,6 +51,22 @@ This plugin inserts unstyled content (apart from positioning and z-index of the 
 			</div>
 			(...)
 		</div>
+                <div class="ls-section-events">
+			<div class="ls-headline">Videos</div>
+			<div class="ls-result">
+				<div class="ls-thumb-container">
+					<img class="ls-thumb" />
+				</div>
+				<div class="ls-result-title">Event name</div>
+			</div>
+			<div class="ls-result">
+				<div class="ls-thumb-container">
+					<img class="ls-thumb" />
+				</div>
+				<div class="ls-result-title">Event name</div>
+			</div>
+			(...)
+		</div>
 		<div class="ls-section-channels">
 			<div class="ls-headline">Channels</div>
 			<div class="ls-result">
@@ -82,10 +98,12 @@ You can manipulate the following settings - *name* (Type) default:
 - *maxResults* (Number) 5 // Maximum number search results in each section
 - *truncateTitles* (Number) 30 // Maximum characters in search result titles
 - *searchVideos* (Boolean) true // Search for videos
+- *searchEvents* (Boolean) true // Search for live events
 - *searchChannels* (Boolean) false // Search for channels
 - *searchTags* (Boolean) false  // Search for tags
 - *showHeadlines* (Boolean) true  // Show a headline for each section
 - *videoHeadline* (String) "Videos" // Headline for the video section
+- *eventHeadline* (String) "Videos" // Headline for the live event section
 - *channelHeadline* (String) "Channels" // Headline for the channel section
 - *tagHeadline* (String) "Tags" // Headline for the tag section
 - *showThumbnails* (Boolean) true // Show a thumbnail for each video result
